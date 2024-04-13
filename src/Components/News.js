@@ -61,8 +61,7 @@ export class News extends Component {
         
       async componentDidMount() {
         this.props.setProgress(10)
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&pageSize=
-        ${this.props.pageSize}&page=${this.state.page}&category=${this.props.category}&apikey=${this.props.apiKey}`
+        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&pageSize=${this.props.pageSize}&page=${this.state.page}&category=${this.props.category}&apikey=${this.props.apiKey}`
         this.props.setProgress(30)
         this.setState({loading:true})
         let data = await fetch(url)
